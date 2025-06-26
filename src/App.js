@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import ApplicationTable from './components/ApplicationTable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex">
+      <Sidebar />
+      <div
+        className="flex-grow-1 d-flex flex-column"
+        style={{ backgroundColor: '#f5f6fa', height: '100vh', overflow: 'hidden' }}
+      >
+        <Header />
+        <div style={{ flexGrow: 1, overflowY: 'auto', padding: '1.5rem' }}>
+          <ApplicationTable />
+        </div>
+      </div>
+
     </div>
   );
 }

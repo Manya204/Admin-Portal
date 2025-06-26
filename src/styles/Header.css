@@ -1,0 +1,14 @@
+.topbar {
+    background-color: #1c2331;
+    height: 60px;
+  }
+  
+  .topbar-title svg {
+    cursor: pointer;
+  }
+  
+  .topbar-profile img {
+    object-fit: cover;
+    border: 1px solid #ffffff44;
+  }
+  
